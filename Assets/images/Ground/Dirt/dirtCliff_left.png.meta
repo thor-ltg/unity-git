@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dirtCliff_left_0: 4258441967787157360
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

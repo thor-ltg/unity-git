@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      alienBlue_front_0: 402502597922571196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

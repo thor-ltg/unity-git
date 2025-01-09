@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      snowCorner_right_0: -8470706344786720319
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

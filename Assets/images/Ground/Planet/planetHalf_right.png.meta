@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      planetHalf_right_0: 8428421259754949255
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

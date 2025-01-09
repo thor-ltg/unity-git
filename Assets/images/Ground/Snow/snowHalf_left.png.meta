@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      snowHalf_left_0: -1937337217480931707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

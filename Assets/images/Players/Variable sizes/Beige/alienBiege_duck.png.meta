@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      alienBiege_duck_0: -311420285922512240
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

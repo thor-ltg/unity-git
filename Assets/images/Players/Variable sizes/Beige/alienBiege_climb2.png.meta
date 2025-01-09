@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      alienBiege_climb2_0: -7708228623504451471
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

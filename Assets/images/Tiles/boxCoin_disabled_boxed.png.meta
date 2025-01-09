@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boxCoin_disabled_boxed_0: -4899659188724925476
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

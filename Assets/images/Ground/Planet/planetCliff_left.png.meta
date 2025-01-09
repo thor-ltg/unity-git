@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      planetCliff_left_0: 5867711658427077248
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

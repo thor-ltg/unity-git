@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      snowCliffAlt_right_0: -844118375926070475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

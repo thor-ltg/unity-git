@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hudJewel_blue_0: 6400007394036093630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

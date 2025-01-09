@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      alienBiege_swim1_0: 9111560359679763838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      planetHill_right_0: 5895401733447384283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
