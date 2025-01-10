@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -6,10 +7,13 @@ public class PlayerScript : MonoBehaviour
     Rigidbody2D rb;
     public float walkspeed = 6;
     public float jumpspeed = 11;
+
+    Vector3 startPosition;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Application.targetFrameRate = 1000;
+        startPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -19,6 +23,23 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.linearVelocityY = jumpspeed;
+        }
+        if (-10 > transform.position.y)
+        {
+            transform.position = startPosition;
+        }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Finish")
+        {
+            transform.position = startPosition;
+        }
+        else if (collision.collider.tag == "Enemy")
+        {
+            transform.position = startPosition;
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     GameObject target;
-    public float moveFactor = 0.15f;
+    public float moveFactor = 0.3f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
