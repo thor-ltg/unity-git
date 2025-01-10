@@ -358,6 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1930243423227961752}
   - component: {fileID: 8061096900644385939}
+  - component: {fileID: -8989308372781745642}
   m_Layer: 0
   m_Name: snowhalf
   m_TagString: Untagged
@@ -416,7 +417,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: -0.00000011920929, y: 0}
@@ -431,6 +432,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 6.3999996, y: 0.7}
   m_EdgeRadius: 0
+--- !u!251 &-8989308372781745642
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498925453062002525}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &7265647401098207075
 GameObject:
   m_ObjectHideFlags: 0
