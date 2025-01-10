@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 1854894805077032784}
   - component: {fileID: 1261976113784194094}
   - component: {fileID: 3399784398949327023}
+  - component: {fileID: 2266974244459370311}
   m_Layer: 0
-  m_Name: alienPink_front_0
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +116,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &3399784398949327023
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,3 +163,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.07, y: 1.51}
   m_EdgeRadius: 0
+--- !u!114 &2266974244459370311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2219390066017299869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc90d4babf09f2545afe5747814adaca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkspeed: 6
+  jumpspeed: 6
