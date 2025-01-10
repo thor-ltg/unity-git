@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class skibidiscript : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     Rigidbody2D rb;
@@ -9,6 +9,7 @@ public class skibidiscript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Application.targetFrameRate = 1000;
     }
 
     // Update is called once per frame
