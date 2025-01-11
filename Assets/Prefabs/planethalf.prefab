@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6983929368624763150}
   - component: {fileID: 5080002782457928706}
   - component: {fileID: 4958293372532451172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: planethalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4001749497133757988}
   - component: {fileID: 6049348961882099751}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: planetHalf_left_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7042024706397187049}
   - component: {fileID: 3972536081498481449}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: planetHalf_right_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

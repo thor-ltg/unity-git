@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Enemy
+  - SawTrigger
+  - ElevatorTrigger
+  - ElevatorActivator
   layers:
   - Default
   - TransparentFX
@@ -13,8 +16,8 @@ TagManager:
   - Water
   - UI
   - Background
-  - 
-  - 
+  - Ground
+  - GroundCheck
   - 
   - 
   - 
