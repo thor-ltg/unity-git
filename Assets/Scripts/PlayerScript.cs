@@ -12,7 +12,6 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Application.targetFrameRate = 1000;
         startPosition = transform.position;
     }
 
@@ -33,11 +32,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Finish")
-        {
-            transform.position = startPosition;
-        }
-        else if (collision.collider.tag == "Enemy")
+        if (collision.collider.tag == "Enemy")
         {
             transform.position = startPosition;
         }
