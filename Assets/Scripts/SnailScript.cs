@@ -13,4 +13,11 @@ public class SnailScript : MonoBehaviour
     {
         transform.position += new Vector3(-0.005f, 0);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Fireball")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

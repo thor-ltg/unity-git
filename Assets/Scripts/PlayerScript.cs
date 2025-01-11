@@ -1,4 +1,5 @@
 using System.Diagnostics.Tracing;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -15,6 +16,11 @@ public class PlayerScript : MonoBehaviour
 
     GroundCheckScript groundCheck;
 
+    public GameObject fireball;
+    public Vector3 fireballOffset;
+    public Vector2 fireballSpeed;
+    public float fireballLifetime;
+    int fireballDirection = 1;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,9 +33,24 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         rb.linearVelocityX = Input.GetAxisRaw("Horizontal") * walkspeed;
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            fireballDirection = -1;
+        }
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            fireballDirection = 1;
+        }
         if (Input.GetKeyDown(KeyCode.Space) && groundCheck.isGrounded)
         {
             rb.linearVelocityY = jumpspeed;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            GameObject newfireball = Instantiate(fireball, transform.position + fireballOffset*fireballDirection, Quaternion.identity);
+            Rigidbody2D fireballRb = newfireball.GetComponent<Rigidbody2D>();
+            fireballRb.linearVelocity = fireballSpeed*fireballDirection;
+            Destroy(newfireball, fireballLifetime);
         }
         if (-10 > transform.position.y)
         {

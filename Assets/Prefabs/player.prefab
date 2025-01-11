@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c961506b986af448070ef369c5b5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrounded: 0
 --- !u!1 &2219390066017299869
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,3 +270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkspeed: 6
   jumpspeed: 11
+  rbElevator: {fileID: 0}
+  fireball: {fileID: 4718489258142085194, guid: af363505ab172f84991bce030ea83204, type: 3}
+  fireballOffset: {x: 0, y: 0, z: 0}
+  fireballSpeed: {x: 4, y: 0}
+  fireballLifetime: 5
