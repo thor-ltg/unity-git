@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 1261976113784194094}
   - component: {fileID: 3399784398949327023}
   - component: {fileID: 2823564712595850569}
+  - component: {fileID: 502383139888466829}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -275,3 +276,25 @@ MonoBehaviour:
   fireballOffset: {x: 0, y: 0, z: 0}
   fireballSpeed: {x: 4, y: 0}
   fireballLifetime: 5
+--- !u!95 &502383139888466829
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2219390066017299869}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5b06db961b38a640b7cf6b87248de83, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

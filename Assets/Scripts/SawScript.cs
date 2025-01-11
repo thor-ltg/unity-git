@@ -26,7 +26,9 @@ public class SawScript : MonoBehaviour
         }
         if (collision.tag == "Fireball")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 0.5f);
+            GetComponent<Animator>().Play("saw_Death");
+            rb.linearVelocity = new Vector2(0, 0);
         }
     }
 }

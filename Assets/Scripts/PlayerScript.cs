@@ -12,6 +12,8 @@ public class PlayerScript : MonoBehaviour
 
     Vector3 startPosition;
 
+    SpriteRenderer spriteRenderer;
+
     public Rigidbody2D rbElevator;
 
     GroundCheckScript groundCheck;
@@ -20,44 +22,75 @@ public class PlayerScript : MonoBehaviour
     public Vector3 fireballOffset;
     public Vector2 fireballSpeed;
     public float fireballLifetime;
-    int fireballDirection = 1;
+    int Direction = 1;
+
+    Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
         groundCheck = GetComponentInChildren<GroundCheckScript>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.linearVelocityX = Input.GetAxisRaw("Horizontal") * walkspeed;
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            fireballDirection = -1;
-        }
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            fireballDirection = 1;
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && groundCheck.isGrounded)
-        {
-            rb.linearVelocityY = jumpspeed;
-        }
+        HandleMovement();
         if (Input.GetKeyDown(KeyCode.E))
         {
-            GameObject newfireball = Instantiate(fireball, transform.position + fireballOffset*fireballDirection, Quaternion.identity);
+            GameObject newfireball = Instantiate(fireball, transform.position + fireballOffset*Direction, Quaternion.identity);
             Rigidbody2D fireballRb = newfireball.GetComponent<Rigidbody2D>();
-            fireballRb.linearVelocity = fireballSpeed*fireballDirection;
+            fireballRb.linearVelocity = fireballSpeed*Direction;
             Destroy(newfireball, fireballLifetime);
         }
         if (-10 > transform.position.y)
         {
             transform.position = startPosition;
         }
+        HandleAnimations();
     }
-
+    void HandleMovement()
+    {
+        rb.linearVelocityX = Input.GetAxisRaw("Horizontal") * walkspeed;
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Direction = -1;
+        }
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Direction = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && groundCheck.isGrounded)
+        {
+            rb.linearVelocityY = jumpspeed;
+        }
+    }
+    void HandleAnimations()
+    {
+        if (rb.linearVelocity.sqrMagnitude <= 0)
+        {
+            animator.Play("Player_Idle");
+        }
+        else if (groundCheck.isGrounded)
+        {
+            animator.Play("Player_Walk");
+        }
+        else
+        {
+            animator.Play("Player_Jump");
+        }
+        if (Direction == -1)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Enemy")
