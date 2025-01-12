@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 3399784398949327023}
   - component: {fileID: 2823564712595850569}
   - component: {fileID: 502383139888466829}
+  - component: {fileID: 8403713126623153921}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -274,7 +275,7 @@ MonoBehaviour:
   rbElevator: {fileID: 0}
   fireball: {fileID: 4718489258142085194, guid: af363505ab172f84991bce030ea83204, type: 3}
   fireballOffset: {x: 0, y: 0, z: 0}
-  fireballSpeed: {x: 4, y: 0}
+  fireballSpeed: {x: 7, y: 0}
   fireballLifetime: 5
 --- !u!95 &502383139888466829
 Animator:
@@ -298,3 +299,39 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &8403713126623153921
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2219390066017299869}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.59

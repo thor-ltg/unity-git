@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    BoxCollider2D StandingHitbox;
+    CircleCollider2D DuckingHitbox;
     Rigidbody2D rb;
     public float walkspeed = 6;
     public float jumpspeed = 11;
@@ -25,6 +27,8 @@ public class PlayerScript : MonoBehaviour
     int Direction = 1;
 
     Animator animator;
+
+    bool duck = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,13 +36,18 @@ public class PlayerScript : MonoBehaviour
         groundCheck = GetComponentInChildren<GroundCheckScript>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        StandingHitbox = GetComponent<BoxCollider2D>();
+        DuckingHitbox = GetComponent<CircleCollider2D>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        HandleMovement();
+        if (!duck)
+        {
+            HandleMovement();
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             GameObject newfireball = Instantiate(fireball, transform.position + fireballOffset*Direction, Quaternion.identity);
@@ -49,6 +58,16 @@ public class PlayerScript : MonoBehaviour
         if (-10 > transform.position.y)
         {
             transform.position = startPosition;
+        }
+        if (duck)
+        {
+            DuckingHitbox.enabled = true;
+            StandingHitbox.enabled = false;
+        }
+        else
+        {
+            DuckingHitbox.enabled = false;
+            StandingHitbox.enabled = true;
         }
         HandleAnimations();
     }
@@ -70,15 +89,15 @@ public class PlayerScript : MonoBehaviour
     }
     void HandleAnimations()
     {
-        if (rb.linearVelocity.sqrMagnitude <= 0)
+        if (rb.linearVelocity.sqrMagnitude <= 0 && !duck)
         {
             animator.Play("Player_Idle");
         }
-        else if (groundCheck.isGrounded)
+        else if (groundCheck.isGrounded && !duck)
         {
             animator.Play("Player_Walk");
         }
-        else
+        else if (!duck)
         {
             animator.Play("Player_Jump");
         }
@@ -89,6 +108,15 @@ public class PlayerScript : MonoBehaviour
         else
         {
             spriteRenderer.flipX = false;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            animator.Play("Player_Duck");
+            duck = true;
+        }
+        else
+        {
+            duck = false;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

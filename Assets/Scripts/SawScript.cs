@@ -10,6 +10,7 @@ public class SawScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = startVelocity;
+        GetComponent<Animator>().Play("saw_Idle");
     }
 
     // Update is called once per frame
