@@ -59,16 +59,6 @@ public class PlayerScript : MonoBehaviour
         {
             transform.position = startPosition;
         }
-        if (duck)
-        {
-            DuckingHitbox.enabled = true;
-            StandingHitbox.enabled = false;
-        }
-        else
-        {
-            DuckingHitbox.enabled = false;
-            StandingHitbox.enabled = true;
-        }
         HandleAnimations();
     }
     void HandleMovement()
