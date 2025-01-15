@@ -64,11 +64,11 @@ public class PlayerScript : MonoBehaviour
     void HandleMovement()
     {
         rb.linearVelocityX = Input.GetAxisRaw("Horizontal") * walkspeed;
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if (rb.linearVelocityX < 0)
         {
             Direction = -1;
         }
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (rb.linearVelocityX > 0)
         {
             Direction = 1;
         }
@@ -79,7 +79,7 @@ public class PlayerScript : MonoBehaviour
     }
     void HandleAnimations()
     {
-        if (rb.linearVelocity.sqrMagnitude <= 0 && !duck)
+        if (rb.linearVelocityX == 0 && groundCheck.isGrounded && !duck)
         {
             animator.Play("Player_Idle");
         }
