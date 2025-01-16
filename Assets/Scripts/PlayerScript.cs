@@ -115,6 +115,10 @@ public class PlayerScript : MonoBehaviour
         {
             transform.position = startPosition;
         }
+        if (collision.collider.tag == "BlueButtonTrigger")
+        {
+            startPosition = transform.position;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

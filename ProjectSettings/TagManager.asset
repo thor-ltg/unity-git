@@ -9,6 +9,9 @@ TagManager:
   - ElevatorTrigger
   - ElevatorActivator
   - Fireball
+  - BlueButtonTrigger
+  - yellowFlag
+  - SnailTrigger
   layers:
   - Default
   - TransparentFX
