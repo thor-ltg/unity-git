@@ -274,7 +274,7 @@ MonoBehaviour:
   jumpspeed: 11
   rbElevator: {fileID: 0}
   fireball: {fileID: 4718489258142085194, guid: af363505ab172f84991bce030ea83204, type: 3}
-  fireballOffset: {x: 0, y: 0, z: 0}
+  fireballOffset: {x: 1, y: 0, z: 0}
   fireballSpeed: {x: 7, y: 0}
   fireballLifetime: 5
 --- !u!95 &502383139888466829

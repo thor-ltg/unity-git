@@ -12,6 +12,8 @@ TagManager:
   - BlueButtonTrigger
   - yellowFlag
   - SnailTrigger
+  - Stone
+  - winScreen
   layers:
   - Default
   - TransparentFX

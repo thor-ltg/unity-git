@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemySpawnerScript : MonoBehaviour
 {
     public GameObject Enemy;
-    public int SpawnTime;
+    public float SpawnTime;
     public float DespawnTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -17,7 +17,7 @@ public class endFlagScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Player")
+        if (collision.collider.tag == "Player" && SceneManager.GetActiveScene().name.Contains("Level"))
         {
             string[] nextsence = SceneManager.GetActiveScene().name.Split();
             if (int.Parse(nextsence[1]) == LastLevel)
@@ -29,6 +29,11 @@ public class endFlagScript : MonoBehaviour
                 nextsence[1] = (int.Parse(nextsence[1]) + 1).ToString();
             }
             SceneManager.LoadScene(nextsence[0] +" "+ nextsence[1]);
+        }
+        else if (collision.collider.tag == "Player")
+        {
+            GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+            Camera.GetComponent<CameraScript>().target = GameObject.FindGameObjectWithTag("winScreen");
         }
     }
 }
