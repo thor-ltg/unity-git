@@ -126,5 +126,9 @@ public class PlayerScript : MonoBehaviour
         {
             rbElevator.linearVelocity = new Vector2(0, 3);
         }
+        if (collision.tag == "Enemy")
+        {
+            transform.position = startPosition;
+        }
     }
 }
