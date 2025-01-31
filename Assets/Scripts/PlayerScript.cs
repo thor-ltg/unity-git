@@ -111,7 +111,7 @@ public class PlayerScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Enemy" || collision.collider.tag == "Fireball")
+        if (collision.collider.tag == "Enemy")
         {
             transform.position = startPosition;
         }
