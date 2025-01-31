@@ -7,6 +7,7 @@ public class FireSnailScript : MonoBehaviour
     public GameObject FireballObject;
     GameObject Player;
     public float shoottime = 0.5f;
+    public float shootspeed = 15;
     bool CanShoot = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,7 +28,7 @@ public class FireSnailScript : MonoBehaviour
         CanShoot = false;
         GameObject Fireball = Instantiate(FireballObject, transform.position, Quaternion.identity);
         Rigidbody2D Fireballrb = Fireball.GetComponent<Rigidbody2D>();
-        Fireballrb.linearVelocity = (Player.transform.position - transform.position);
+        Fireballrb.linearVelocity = ((Player.transform.position - transform.position).normalized)*shootspeed;
         yield return new WaitForSeconds(shoottime);
         CanShoot = true;
     }

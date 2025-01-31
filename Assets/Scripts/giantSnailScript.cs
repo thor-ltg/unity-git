@@ -47,7 +47,7 @@ public class giantSnailScript : MonoBehaviour
             MainCamera.GetComponent<CameraScript>().target = player;
             Destroy(collision.gameObject);
         }
-        if (stage == 0)
+        if (stage <= 0 && Health <= 0)
         {
             GameObject flag = Instantiate(endflag, transform.position + new Vector3(0, -2.1f), Quaternion.identity);
             Destroy(gameObject);
